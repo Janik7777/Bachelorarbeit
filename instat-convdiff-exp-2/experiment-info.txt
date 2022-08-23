@@ -1,0 +1,58 @@
+instat_convdiff_2.py 
+
+nu = 1e-20
+
+Learn Point P in a = ( p1 - y, x - p2)
+
+Randbed: 0
+Startbedingung: cos-kreis um (0.33,0.33)
+
+delta_t = 0.1
+Intervall = [0,6.1]
+
+num_points = 400
+-----------------------
+
+num_domain=200,
+num_boundary=50,
+num_initial=50, 
+
+net = dde.nn.FNN([3] + [40] * 6 + [1], "tanh", "Glorot uniform")
+no weights                                        
+100000 epochs                                                        
+lr=0.0002                                                         
+
+---------------------------
+run1: 
+
+Best model at step 96000:
+  train loss: 1.62e-06
+  test loss: 1.62e-06
+  test metric: []
+
+'train' took 1218.085937 s
+
+---------------------------
+run2:
+
+'train' took 1292.726395 s
+
+---------------------------
+run3:
+
+Best model at step 98000:
+  train loss: 6.10e-06
+  test loss: 6.10e-06
+  test metric: []
+
+'train' took 1342.690399 s
+
+----------------------------
+run4:
+
+Best model at step 96000:
+  train loss: 2.84e-06
+  test loss: 2.84e-06
+  test metric: []
+
+'train' took 1321.845494 s

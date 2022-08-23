@@ -1,0 +1,82 @@
+stat_convdiff_1.py
+
+nu = dde.Variable(0.6)
+nu_true = 0.5
+a1 = 1.0
+a2 = 0
+
+Randbed:
+4.0 * (1.0 - x2) * x2 links,
+0 Rest
+-----------------------
+
+num_points = 200
+num_domain=200,
+num_boundary=50,
+num_test = 1000
+
+net = dde.nn.FNN([2] + [40] * 4 + [1], "tanh", "Glorot uniform")
+no-weights
+100000 epochs
+lr=0.0002
+
+------------------------
+run1:
+
+Best model at step 100000:
+  train loss: 4.07e-04
+  test loss: 4.07e-04
+  test metric: []
+
+'train' took 532.864329 s
+
+l2 relative error for u: 0.05063353587070564
+
+----------------------
+run2:
+
+Best model at step 99000:
+  train loss: 3.91e-04
+  test loss: 3.90e-04
+  test metric: []
+
+'train' took 476.956831 s
+
+l2 relative error for u: 0.0510369035607514
+
+-----------------------
+run3:
+
+Best model at step 97000:
+  train loss: 3.97e-04
+  test loss: 3.98e-04
+  test metric: []
+
+'train' took 474.075931 s
+
+l2 relative error for u: 0.05000247244171181
+
+--------------------------
+run4:
+
+Best model at step 99000:
+  train loss: 2.34e-04
+  test loss: 2.33e-04
+  test metric: []
+
+'train' took 476.567688 s
+
+l2 relative error for u: 0.05200231162071032
+
+
+------------------
+run5:
+
+Best model at step 100000:
+  train loss: 2.63e-04
+  test loss: 2.63e-04
+  test metric: []
+
+'train' took 479.593034 s
+
+l2 relative error for u: 0.05154545781328504

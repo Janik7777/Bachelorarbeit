@@ -1,0 +1,35 @@
+instat_convdiff_3.py 
+
+nu = 1e-20
+
+Learn a Function
+
+Randbed: 0
+Startbedingung: 
+  if(in Kreis um (0.5,0.5) mit Radius 0.45): 
+    Werte 1.0 - Abstand von (0.3,0.3)
+  else: 
+    0.0
+
+--> Nur Lernen auf Kreis um (0.5,0.5) mit Radius 0.45
+
+delta_t = 0.1
+Intervall = [0,6.1]
+
+num_points = 400
+-----------------------
+
+num_domain=200,
+
+net = dde.nn.FNN([3] + [40] * 6 + [1], "tanh", "Glorot uniform")
+no weights                                        
+100000 epochs                                                        
+lr=0.0002                                                         
+
+---------------------------
+Best model at step 100000:
+  train loss: 1.12e-04
+  test loss: 1.12e-04
+  test metric: []
+
+'train' took 1054.681043 s

@@ -1,0 +1,62 @@
+instat_convdiff_1.py 
+
+nu = 1e-5
+
+learn a
+a_true = (0.1, 0.1)^T
+
+Randbed: 0
+Startbedingung: 0
+
+delta_t = 0.1
+Intervall = [0,5]
+
+num_points = 400
+-----------------------
+
+num_domain=200,
+num_boundary=50,
+num_initial=50, 
+
+net = dde.nn.FNN([3] + [40] * 6 + [1], "tanh", "Glorot uniform")
+no weights                                        
+100000 epochs                                                        
+lr=0.0002                                                         
+
+---------------------------
+run1:
+Best model at step 99000:
+  train loss: 2.47e-06
+  test loss: 2.47e-06
+  test metric: []
+
+'train' took 1338.590587 s
+
+---------------------------
+run2:
+Best model at step 100000:
+  train loss: 2.42e-06
+  test loss: 2.42e-06
+  test metric: []
+
+'train' took 1328.128369 s
+
+---------------------------
+run3:
+
+Best model at step 96000:
+  train loss: 3.31e-06
+  test loss: 3.31e-06
+  test metric: []
+
+'train' took 1335.909044 s
+
+---------------------------
+run4:
+
+Best model at step 100000:
+  train loss: 2.07e-06
+  test loss: 2.07e-06
+  test metric: []
+
+'train' took 1310.915334 s
