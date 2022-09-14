@@ -1,0 +1,29 @@
+navier-stokes-stat.py 
+
+nu = dde.Variable(0.1)
+
+rho = 1.0
+nu_true = 0.1
+
+num_points = 400
+
+auf [16, 40] x [1, 15]
+-----------------------
+
+num_domain=400,
+num_boundary=200,
+
+net = dde.nn.FNN([2] + [50] * 6 + [3], "tanh", "Glorot uniform")
+no weights                                        
+30000 epochs                                                        
+lr=0.0002                                                        
+---------------------------
+l2 relative error for vx: 0.004047173221189799
+l2 relative error for vy: 0.06128772736823012
+
+Best model at step 30000:
+  train loss: 1.87e-04
+  test loss: 1.87e-04
+  test metric: []
+
+'train' took 1512.042921 s
