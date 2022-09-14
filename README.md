@@ -1,4 +1,4 @@
-# Repository zur BachelorarbeitBachelorarbeit
+# Repository zur Bachelorarbeit
 
 ## Deep Learning für Parameteridentifizierung von Konvektionsproblemen mit PINNs
 
