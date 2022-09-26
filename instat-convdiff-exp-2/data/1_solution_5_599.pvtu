@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VTKFile type="PUnstructuredGrid" version="0.1" byte_order="LittleEndian" compressor="vtkZLibDataCompressor">
+    <PUnstructuredGrid GhostLevel="0">
+        <PPointData>
+            <PDataArray Name="a_x" type="Float64" format="ascii"/>
+            <PDataArray Name="a_z" type="Float64" format="ascii"/>
+            <PDataArray Name="s" type="Float64" format="ascii"/>
+            <PDataArray Name="u" type="Float64" format="ascii"/>
+        </PPointData>
+        <PCellData Scalars="subdomain">
+            <PDataArray Name="subdomain" type="Float64" format="ascii"/>
+        </PCellData>
+        <PPoints>
+            <PDataArray type="Float64" NumberOfComponents="3"/>
+        </PPoints>
+        <Piece Source="1_solution_5_599_0.vtu"/>
+    </PUnstructuredGrid>
+</VTKFile>
